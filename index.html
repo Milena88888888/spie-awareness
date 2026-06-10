@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Kurzumfrage zur Umgebung der Bodenweide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: url('image.jpg') center center / cover no-repeat fixed;
+            color: #ffffff;
+        }
+
+        .overlay {
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 18px;
+            padding: 40px 45px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.20);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 38px;
+            margin-bottom: 18px;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #f5f5f5;
+            max-width: 760px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 12px 24px;
+            background: #0067b8;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: #00539a;
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                padding: 28px 22px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="overlay">
+    <div class="page">
+        <h1>Kurzumfrage zur Umgebung der Bodenweide</h1>
+
+        <p>
+            Vielen Dank, dass Sie sich kurz Zeit für diese Umfrage nehmen.
+            Wir möchten besser verstehen, wie die Umgebung der Bodenweide
+            von den Nutzerinnen und Nutzern wahrgenommen wird.
+        </p>
+
+        <p>
+            Die Beantwortung dauert ca. 2–3 Minuten und erfolgt anonym.
+            Bitte beantworten Sie die folgenden Fragen aus Ihrer persönlichen Sicht.
+        </p>
+
+        <a href="survey.html" class="btn-primary">Zur Umfrage</a>
+    </div>
+</div>
+</body>
+</html>

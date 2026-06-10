@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Microsoft-Konto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: url('image.jpg') center center / cover no-repeat fixed;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.18);
+            padding: 40px 20px;
+        }
+
+        .login-box, .awareness-box {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            padding: 32px 40px;
+            box-shadow: 0 0 18px rgba(0,0,0,0.12);
+            max-width: 380px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0 0 8px 0;
+        }
+
+        p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        label {
+            display: block;
+            margin-top: 16px;
+            font-size: 13px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+            border: 1px solid #a6a6a6;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            margin-top: 24px;
+            width: 100%;
+            padding: 8px;
+            background: #0067b8;
+            color: #ffffff;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #00539a;
+        }
+
+        .small-text {
+            margin-top: 12px;
+            font-size: 11px;
+            color: #666;
+        }
+
+        .checkbox-row {
+            margin-top: 8px;
+            font-size: 12px;
+        }
+
+        .awareness-box h2 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .awareness-list {
+            margin-top: 8px;
+            padding-left: 18px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="login-box" id="loginBox">
+        <h1>Anmeldung</h1>
+        <p>Melden Sie sich mit Ihrem Microsoft-Konto an, um an der Gutscheinverlosung teilzunehmen.</p>
+
+        <form id="loginForm">
+            <label for="email">E-Mail-Adresse</label>
+            <input type="email" id="email" name="email" placeholder="name@firma.ch" required>
+
+            <label for="password">Kennwort</label>
+            <input type="password" id="password" name="password" placeholder="Kennwort" required>
+
+            <div class="checkbox-row">
+                <input type="checkbox" id="staySignedIn">
+                <label for="staySignedIn" style="display:inline; font-size:12px;">Angemeldet bleiben</label>
+            </div>
+
+            <button type="submit" class="btn-primary">Anmelden</button>
+
+            <div class="small-text">
+                Mit der Anmeldung bestätigen Sie, dass Sie die Nutzungsrichtlinien Ihres Unternehmens einhalten.
+            </div>
+        </form>
+    </div>
+
+    <div class="awareness-box hidden" id="awarenessBox">
+        <h2>Hinweis zur Security‑Awareness‑Übung</h2>
+        <p>Diese Anmeldung war Teil einer Security‑Awareness‑Übung.</p>
+        <p>
+            In einem echten Angriff hätten Angreifer hier Ihre Zugangsdaten stehlen können,
+            zum Beispiel für E‑Mail oder Cloud‑Dienste. Häufig werden „echte“ Inhalte wie
+            Umfragen, Gewinnspiele oder Gutscheine genutzt, um Vertrauen zu gewinnen.
+        </p>
+        <p>In dieser Übung wurden keine eingegebenen Daten gespeichert.</p>
+
+        <p><strong>So schützen Sie sich künftig:</strong></p>
+        <ul class="awareness-list">
+            <li>Seien Sie misstrauisch bei Links in unerwarteten E‑Mails.</li>
+            <li>Prüfen Sie die Internetadresse (URL) genau.</li>
+            <li>Geben Sie keine Zugangsdaten ein, wenn Sie unsicher sind.</li>
+            <li>Melden Sie verdächtige E‑Mails an IT / Security.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        document.getElementById('loginBox').classList.add('hidden');
+        document.getElementById('awarenessBox').classList.remove('hidden');
+    });
+</script>
+</body>
+</html>
